@@ -8,6 +8,8 @@ var UserModel =  mongoose.Schema({
     u_classe: String,
     u_photo:String ,
     u_role:String,
+    u_ban:{ type: Boolean, default: false },
+    u_activate:{ type: Boolean, default: false },
     u_description : String
 }, {timestamps: true});
 

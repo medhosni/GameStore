@@ -10,7 +10,9 @@ mongoose.connect(mongoDB)
     .catch((function (error) { console.log(error); }));
 
 const usersRouter = require("./Routes/user.route");
+const projectRouter = require("./Routes/projects.route");
 app.use("/users", usersRouter)
+app.use("/projects",projectRouter)
 
 app.listen(PORT, function () {
     console.log(`Server running on port ${PORT}`);
